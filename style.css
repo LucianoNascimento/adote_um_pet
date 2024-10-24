@@ -1,0 +1,42 @@
+*{ margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+ 
+
+}
+
+body {
+    background-color: rgb(88, 255, 88);
+}
+#menu-nav {
+    list-style-type: none;
+    padding: 0;
+    background-color: rgb(25, 26, 24);
+    margin-top: 80px;
+    text-align: center;
+    
+
+}
+
+#menu-nav li{
+    display: inline;
+}
+ 
+#menu-nav li a{
+    color: aliceblue;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+#menu-nav li a:hover {
+    background-color: rgb(19, 68, 228);
+    padding: 10px;
+}
+#menu-nav ul li:last-child {
+    float :right;
+    background-color: rgb(38, 38, 248);
+}
+
+
