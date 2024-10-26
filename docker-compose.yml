@@ -5,27 +5,41 @@ services:
     build: .
     container_name: adote_um_pet
     restart: always
-    working_dir: /var/www/html
+    working_dir: /var/www/html/laravel-app
+    environment:
+      DB_HOST: db_pet
     volumes:
-      - ./:/var/www/html
+      - ./:/var/www/html/laravel-app
     ports:
       - "9000:9000"
     depends_on:
-      - db
+      - db_pet
 
-  db:
+  db_pet:
     image: mysql:8.0
-    container_name: laravel_db
+    container_name: adote_um_pet_db
     restart: always
     environment:
-      MYSQL_DATABASE: adote_um_pet
-      MYSQL_USER: root
-      MYSQL_PASSWORD: root
       MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: adote_um_pet
+      MYSQL_USER: pet
+      MYSQL_PASSWORD: projectpet
     ports:
       - "3306:3306"
     volumes:
       - db_data:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: adote_um_pet_phpmyadmin
+    restart: always
+    environment:
+      PMA_HOST: db_pet
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "9080:80"
+    depends_on:
+      - db_pet
 
 volumes:
   db_data:
