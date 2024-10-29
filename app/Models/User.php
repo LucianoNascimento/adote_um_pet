@@ -19,10 +19,10 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
+        'uuid',
         'name',
         'email',
         'password',
-        'uid',
     ];
 
     /**
@@ -49,7 +49,7 @@ class User extends Authenticatable
         parent::boot();
 
         static::creating(function ($user) {
-            $user->uid = (string) Str::uuid();
+            $user->uuid = (string) Str::uuid();
         });
     }
 }
