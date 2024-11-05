@@ -1,6 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AnimalController;
+
+// api.ph
+// web.php
+//Route::get('/animais/create', [AnimalController::class, 'create'])->name('animais.create');
 
 /*
 |--------------------------------------------------------------------------
