@@ -1,0 +1,14 @@
+.cabecalho {
+    display: flex;
+    background-color:#83aaf8;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 50px;
+    transition: background-color 0.5s ease, padding 0.5s ease; /* Transição suave */
+}
+
+.cabecalho :hover {
+    color: rgb(18, 18, 158);
+    text-decoration: underline; /* Sublinha ao passar o mouse */
+}
