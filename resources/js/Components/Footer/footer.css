@@ -1,0 +1,26 @@
+.footer-container {
+    display: flex;
+    font-size: 12px;
+    margin: 0%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color:#9cb2df;
+    text-align: left;
+    bottom: 0; /* Alinha à parte inferior */
+    left: 0; /* Alinha à esquerda */
+    right: 0; /* Alinha à direita */
+    padding: 10px;
+
+}
+ 
+
+
+
+ a {
+    color: #696e69; /* Cor dos links */
+    text-decoration: none; /* Remove sublinhado */
+}
+
+ a:hover {
+    text-decoration: underline; /* Sublinha ao passar o mouse */
+}
